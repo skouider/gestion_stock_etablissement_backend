@@ -22,7 +22,7 @@ import com.esnet.dto.MouvementStockDTO;
 import com.esnet.service.MouvementStockService;
 
 @RestController
-@RequestMapping("/api/mouvements-stock")
+@RequestMapping("/api/v1/mouvements-stock")
 @CrossOrigin("*")
 public class MouvementStockController {
 
