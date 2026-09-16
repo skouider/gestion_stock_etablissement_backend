@@ -12,6 +12,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
+import jakarta.persistence.Lob;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 
@@ -29,6 +30,9 @@ public class Article {
     private String description;
 
     private int quantite;
+     
+    @Lob
+    private byte[] imageArticle;
 
     private LocalDateTime dateCreation;
 
@@ -119,4 +123,16 @@ public class Article {
     public void setTransferts(List<Transfert> transferts) {
         this.transferts = transferts;
     }
+
+
+	public byte[] getImageArticle() {
+		return imageArticle;
+	}
+
+
+	public void setImageArticle(byte[] imageArticle) {
+		this.imageArticle = imageArticle;
+	}
+    
+    
 }

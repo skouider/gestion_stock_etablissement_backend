@@ -25,4 +25,6 @@ public interface ArticleService {
     public List<Article> importFromMultiSheetExcel(MultipartFile file);
 
     void delete(Long id);
+    
+    public byte[] getImageArticle(Long id);
 }

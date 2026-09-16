@@ -282,5 +282,25 @@ public class ArticleServiceImpl implements ArticleService {
         } catch (Exception e) {
             return 0;
         }
-    }}
+    }
 
+	@Override
+	public byte[] getImageArticle(Long id) {
+
+	    Article article = articleRepository.findById(id)
+	            .orElseThrow(() ->
+	                new RuntimeException("Article introuvable avec l'id : " + id)
+	            );
+
+	    if (article.getImageArticle() == null ||
+	        article.getImageArticle().length == 0) {
+
+	        throw new RuntimeException(
+	            "Aucune image disponible pour l'article : " + id
+	        );
+	    }
+
+	    return article.getImageArticle();
+	}
+
+}

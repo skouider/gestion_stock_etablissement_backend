@@ -11,6 +11,8 @@ public class ArticleDTO {
     private LocalDateTime dateCreation;
     private Long stockId;
     private String stockNom;
+    private String imageUrl;
+
 
     // Getters and Setters
     public Long getId() { return id; }
@@ -29,4 +31,11 @@ public class ArticleDTO {
     public void setStockId(Long stockId) { this.stockId = stockId; }
     public String getStockNom() { return stockNom; }
     public void setStockNom(String stockNom) { this.stockNom = stockNom; }
+	public String getImageUrl() {
+		return imageUrl;
+	}
+	public void setImageUrl(String imageUrl) {
+		this.imageUrl = imageUrl;
+	}
+    
 }
